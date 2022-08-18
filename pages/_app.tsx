@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { AppProps } from "../node_modules/next/app";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
