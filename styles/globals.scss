@@ -1,5 +1,13 @@
 @import "./fonts/fonts.scss";
 
+:root {
+  --primary: #ff5f5f;
+  --primary-light: #f7eee0;
+  --primary-dark: #111416;
+  --color-white: #fff;
+  --color-grey: #80858d;
+}
+
 html,
 body {
   padding: 0;
