@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Layout from "../components/layout/Layout";
 import { AppProps } from "../node_modules/next/app";
 import "../styles/globals.scss";
 
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
