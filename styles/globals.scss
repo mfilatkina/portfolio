@@ -1,4 +1,4 @@
-@import "./fonts/fonts.scss";
+@import "./fonts/fonts";
 
 :root {
   --primary: #ff5f5f;
@@ -10,10 +10,11 @@
 
 html,
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  color: var(--primary-dark);
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
+  font-family: Nunito, sans-serif;
 }
 
 * {
@@ -63,14 +64,4 @@ img {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
