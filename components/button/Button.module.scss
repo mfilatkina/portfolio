@@ -1,8 +1,28 @@
 .button {
-  padding: 0.67rem 1.14rem;
+  padding: 0.5rem 1.2rem;
   font-weight: 700;
   font-size: 1rem;
+  line-height: 2.6rem;
   border: none;
   border-radius: 100px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary {
+  color: var(--color-white);
+  background-color: var(--primary);
+
+  &:hover {
+    background-color: var(--primary-active);
+  }
+}
+
+.ghost {
+  background-color: var(--color-grey-light);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--primary);
+  }
 }
