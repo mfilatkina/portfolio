@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 3.12rem);
+}
+
+.card {
+  flex: 1;
+  padding: 5rem;
+}
