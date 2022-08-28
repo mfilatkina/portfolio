@@ -1,4 +1,3 @@
-import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import { LayoutProps } from "./Layout.props";
 
@@ -7,7 +6,6 @@ function Layout({ children }: LayoutProps): JSX.Element {
     <>
       <Navbar />
       {children}
-      <Footer />
     </>
   );
 }
