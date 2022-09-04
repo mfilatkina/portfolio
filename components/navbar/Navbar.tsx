@@ -8,13 +8,13 @@ function Navbar(): JSX.Element {
       <Link href="/">LOGO</Link>
       <ul className={styles.list}>
         <li className={styles["list-item"]}>
-          <Link href="/products/work">WORK</Link>
+          <Link href="/work">WORK</Link>
         </li>
         <li className={styles["list-item"]}>
-          <Link href="/products/about">ABOUT</Link>
+          <Link href="/about">ABOUT</Link>
         </li>
         <li className={styles["list-item"]}>
-          <Link href="/products/contact">CONTACT</Link>
+          <Link href="/contact">CONTACT</Link>
         </li>
       </ul>
     </div>
