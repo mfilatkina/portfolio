@@ -4,7 +4,6 @@
   justify-content: space-between;
   height: 3.12rem;
   padding: 0 5rem;
-  background-color: var(--primary);
 }
 
 .list {
@@ -16,4 +15,8 @@
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+
+  :hover {
+    color: var(--primary);
+  }
 }
