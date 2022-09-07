@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import styles from "../styles/contact.module.scss";
 
@@ -7,6 +7,18 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const changeName = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setName(e.target.value);
+  };
+
+  const changeEmail = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setEmail(e.target.value);
+  };
+
+  const changeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
+    setMessage(e.target.value);
+  };
 
   return (
     <div className={styles.container}>
@@ -30,25 +42,37 @@ function Contact() {
       <h2 className={styles.subtitle}>
         Или оставьте ваши данные, я свяжусь с вами
       </h2>
-      <form>
-        <label>
-          Ваше имя:
+      <form className={styles["contact-form"]}>
+        <div className={styles["contact-input"]}>
+          <label htmlFor="name">Ваше имя:</label>
           <input
+            id="name"
             type="text"
             value={name}
-            // onChange={setName(e.target.value)}
+            onChange={changeName}
             name="name"
           />
-        </label>
-        <label>
-          Ваша почта:
-          <input type="text" name="email" />
-        </label>
-        <label>
-          Сообщение:
-          <input type="text" name="message" />
-        </label>
-        <input type="submit" value="Отправить" />
+        </div>
+        <div className={styles["contact-input"]}>
+          <label htmlFor="email">Ваша почта:</label>
+          <input
+            id="email"
+            type="text"
+            value={email}
+            onChange={changeEmail}
+            name="email"
+          />
+        </div>
+        <div className={styles.message}>
+          <label htmlFor="message">Сообщение:</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={changeMessage}
+            name="message"
+          />
+        </div>
+        <button type="submit">Отправить</button>
       </form>
     </div>
   );
